@@ -35,4 +35,10 @@ console.log(bellow);
 
 //5. Use .reduce() to find the total cost of all the products. */
 
-const totalPrice = products.reduce(())
+const totalPrice = products
+  .map((e) => {
+    return e.price;
+  })
+  .reduce((acc, num) => acc + num, 0);
+
+console.log(totalPrice);
